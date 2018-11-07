@@ -1,0 +1,7 @@
+<!-- templates/registration/login.html -->
+<h2>Login</h2>
+<form method="post">
+  {% csrf_token %} <!-- Security Concerns to prevent XSS Attacks (Cross-Site Scripting) -->
+  {{ form.as_p }}
+  <button type="submit">Login</button>
+</form>
